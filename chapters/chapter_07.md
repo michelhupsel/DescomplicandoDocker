@@ -82,7 +82,7 @@ para guardar o nosso primeiro *dockerfile*, e montá-lo no *container* em
 um volume chamado "/volume" da seguinte forma:
 
 ```bash
-# docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu
+# docker container run -ti --mount type=bind,src=/root/primeiro_dockerfile,dst=/volume ubuntu
 
 root@3d372a410ea2:/# df -h
 Filesystem                   Size Used Avail  Use%  Mounted on
