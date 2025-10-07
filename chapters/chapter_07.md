@@ -82,7 +82,7 @@ para guardar o nosso primeiro *dockerfile*, e montá-lo no *container* em
 um volume chamado "/volume" da seguinte forma:
 
 ```bash
-# docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu
+# docker container run -ti --mount type=bind,src=/root/primeiro_dockerfile,dst=/volume ubuntu
 
 root@3d372a410ea2:/# df -h
 Filesystem                   Size Used Avail  Use%  Mounted on
@@ -121,7 +121,7 @@ possível. Basta passar o parâmetro "ro" após o destino onde será montado
 o volume:
 
 ```bash
-# docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume,ro ubuntu
+# docker container run -ti --mount type=bind,src=/root/primeiro_dockerfile,dst=/volume,ro ubuntu
 root@8d7863b1d9af:/# df -h
 
 Filesystem                   Size   Used  Avail  Use%  Mounted on
@@ -145,7 +145,7 @@ Assim como é possível montar um diretório como volume, também é possível
 montar um arquivo:
 
 ```bash
-# docker container run -ti --mount type=bind,src=/root/primeiro_container/Dockerfile,dst=/Dockerfile ubuntu
+# docker container run -ti --mount type=bind,src=/root/primeiro_dockerfile/Dockerfile,dst=/Dockerfile ubuntu
 
 root@df0e3e58280a:/# df -h
 
@@ -272,7 +272,7 @@ Para que possamos criar um *container* especificando um nome para ele,
 utilizamos o parâmetro "\--name", conforme veremos no exemplo a seguir:
 
 ```bash
-# docker container create -v /data --name dbdados centos
+# docker container create -v /data --name dbdados centos:7
 ```
 
 Com isso, apenas criamos o *container* e especificamos um volume para
